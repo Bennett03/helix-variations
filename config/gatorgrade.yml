@@ -1,7 +1,38 @@
-- main.py:
+setup: |
+  poetry install
+  echo "Setup complete!"
+---
+- hello_world.py:
     - description: Complete all TODOs
       check: MatchFileFragment
       options:
         fragment: TODO
         count: 0
         exact: true
+    - description: Call the say_hello function
+      check: MatchFileFragment
+      options:
+        fragment: "say_hello("
+        count: 2
+    - description: Call the say_hello_color function
+      check: MatchFileFragment
+      options:
+        fragment: "say_hello_color("
+        count: 2
+- writing/reflection.md:
+    - description: Complete all TODOs
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: Write at least 25 words in writing/reflection.md
+      check: CountFileWords
+      options:
+        count: 25
+- description: Pass pylint
+  command: poetry run pylint *.py
+- description: Have a total of 5 commits, 2 of which were created by you
+  check: CountCommits
+  options:
+    count: 5
