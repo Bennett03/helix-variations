@@ -1,0 +1,7 @@
+- main.py:
+    - description: Complete all TODOs
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
