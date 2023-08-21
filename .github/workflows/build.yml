@@ -19,7 +19,6 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -31,12 +30,9 @@ jobs:
       # Runs a single command using the runners shell
       - name: Scrape link to text file
         run: python scrape_to.py
-      
       # Run GatorGrader: see config/gatorgrade.yml
       - name: Run GatorGrader with GatorGrade
         if: always()
         run:  |
           pip install gatorgrade
           gatorgrade --config config/gatorgrade.yml
-
-    
