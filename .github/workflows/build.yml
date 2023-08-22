@@ -42,4 +42,4 @@ jobs:
           if: always()
           run:  |
             pip install gatorgrade
-            gatorgrade
+            gatorgrade --config .gatorgrade.yml
