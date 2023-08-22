@@ -10,3 +10,8 @@
           options:
             fragment: print(
             count: 1
+        - description: Define a function
+          check: MatchFileFragment
+          options:
+            fragment: def(
+            count: 1
