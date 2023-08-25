@@ -15,4 +15,11 @@
           options:
             fragment: def(
             count: 1
+    - report.txt: 
+        - description: Check for love from auto run
+          check: MatchFileFragment
+          options:
+            fragment: love
+            count: 1
+
       
