@@ -43,7 +43,7 @@ jobs:
         # Attempt push
         - uses: actions/checkout@v3
         - name: Create report file
-          run: echo "You are sweet!!" > report.txt
+          run: echo "You are sweet!" > report.txt
         - name: Commit report
           run: |
             git config --global user.name 'howshekilledit'
