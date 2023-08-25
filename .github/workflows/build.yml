@@ -10,6 +10,9 @@ on:
   pull_request:
     branches: [ main ]
 
+permissions: 
+  contents: write
+
 # Create one single job
 # This job performs all necessary checks
 jobs:
@@ -34,9 +37,20 @@ jobs:
           run: |
             pip install -U pip
         # Run the Python program
-        - name: Run Python Program
-          if: always()
-          run: python -c 'f = open("love.py", "w"); f.write("I love you!"); f.close()'
+        # - name: Run Python Program
+        #   if: always()
+        #   run: python -c 'f = open("love.py", "w"); f.write("I love you!"); f.close()'
+        # Attempt push
+        - uses: actions/checkout@v3
+        - name: Create report file
+          run: date +%s > report.txt
+        - name: Commit report
+          run: |
+            git config --global user.name 'howshekilledit'
+            git config --global user.email 'howshekilledite@users.noreply.github.com'
+            git commit -am "Automated report"
+            git push
+        
         # Run GatorGrader: see config/gatorgrade.yml
         - name: Checkout repository
           uses: actions/checkout@v3
