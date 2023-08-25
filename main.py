@@ -1,4 +1,6 @@
-print('love!')
-print('love!')
-print('eek')
+
+def realness():
+  print('love!')
+  print('love!')
+  print('eek')
 # TODO
