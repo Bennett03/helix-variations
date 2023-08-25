@@ -13,7 +13,7 @@
         - description: Define a function
           check: MatchFileFragment
           options:
-            fragment: def(
+            fragment: def
             count: 1
     - report.txt: 
         - description: Check for love from auto run
