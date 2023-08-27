@@ -19,7 +19,7 @@
         - description: Check for love from auto run
           check: MatchFileFragment
           options:
-            fragment: sweet
+            fragment: fun
             count: 1
 
       
