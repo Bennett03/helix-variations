@@ -36,7 +36,9 @@ jobs:
           if: always()
           run: |
             pip install -U pip
-            pip install -r requirements.txt
+            pip install requests
+            pip install json
+            pip install re
         # Run the Python program
         # - name: Run Python Program
         #   if: always()
