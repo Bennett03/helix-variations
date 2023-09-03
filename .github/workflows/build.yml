@@ -32,10 +32,11 @@ jobs:
           with:
             python-version: ${{ matrix.python-version }}
         # Install pip
-        - name: Install Pip
+        - name: Install Pip & Dependencies
           if: always()
           run: |
             pip install -U pip
+            pip install -r requirements.txt
         # Run the Python program
         # - name: Run Python Program
         #   if: always()

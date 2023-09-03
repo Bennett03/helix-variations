@@ -4,9 +4,9 @@
 #https://stackoverflow.com/questions/1393324/in-python-given-a-url-to-a-text-file-what-is-the-simplest-way-to-read-the-cont
 
 
-import urllib.request
-import os
-import sys
+# import urllib.request
+# import os
+# import sys
 import re
 import requests
 import json
