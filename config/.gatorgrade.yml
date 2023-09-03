@@ -25,6 +25,18 @@
             fragment: 'size = vector(20, 0.5, 5)'
             count: 0
             exact: true
+        - description: Change the value of canvas_color on line 18
+          check: MatchFileFragment
+          options:
+            fragment: 'canvas_color = vector(0, 0, 1)'
+            count: 0
+            exact: true
+        - description: Change the value of sconeds_to_helix on line 21
+          check: MatchFileFragment
+          options:
+            fragment: 'seconds_to_helix = 5'
+            count: 0
+            exact: true
 
 
 
