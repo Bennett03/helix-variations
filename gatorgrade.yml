@@ -1,25 +1,16 @@
 - ./:
     - main.py:
-        - description: Complete all TODOs
+        - description: Change the value of n on line 8
           check: MatchFileFragment
           options:
-            fragment: TODO
+            fragment: 'n = 20'
             count: 0
+            exact: true
         - description: Define a print statement
           check: MatchFileFragment
           options:
             fragment: print(
             count: 1
-        - description: Define a function
-          check: MatchFileFragment
-          options:
-            fragment: def
-            count: 1
-    - report.txt: 
-        - description: Check for love from auto run
-          check: MatchFileFragment
-          options:
-            fragment: fun
-            count: 1
+
 
       
