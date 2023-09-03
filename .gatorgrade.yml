@@ -1,4 +1,11 @@
 - ./:
+    - README.md:
+        - description: README file
+          check: MatchFileFragment
+          options:
+            fragment: 'trinket.io'
+            count: 1
+            exact: true
     - main.py:
         - description: Change the value of n on line 8
           check: MatchFileFragment
@@ -6,11 +13,7 @@
             fragment: 'n = 20'
             count: 0
             exact: true
-        - description: Define a print statement
-          check: MatchFileFragment
-          options:
-            fragment: print(
-            count: 1
+
 
 
       

@@ -1,15 +1,14 @@
 #scrapes content from trinket.io web editor to main.py
 #https://stackoverflow.com/questions/2081586/web-scraping-with-python
 #https://stackoverflow.com/questions/1393324/in-python-given-a-url-to-a-text-file-what-is-the-simplest-way-to-read-the-cont
-#https://stackoverflow.com/questions/1393324/in-python-given-a-url-to-a-text-file-what-is-the-simplest-way-to-read-the-cont
 
-
-# import urllib.request
-# import os
-# import sys
 import re
 import requests
 import json
+
+#get url from README.md
+
+
 
 
 url = "https://trinket.io/embed/glowscript/4e40208104"
