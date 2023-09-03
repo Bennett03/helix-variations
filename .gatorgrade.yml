@@ -1,6 +1,6 @@
 - ./:
     - README.md:
-        - description: README file
+        - description: Add Trinket link to README.md
           check: MatchFileFragment
           options:
             fragment: 'trinket.io'
@@ -11,7 +11,7 @@
           check: MatchFileFragment
           options:
             fragment: 'n = 20'
-            count: 0
+            count: 1
             exact: true
 
 
