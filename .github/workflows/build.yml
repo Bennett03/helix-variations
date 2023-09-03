@@ -37,8 +37,6 @@ jobs:
           run: |
             pip install -U pip
             pip install requests
-            pip install json
-            pip install re
         # Run the Python program
         # - name: Run Python Program
         #   if: always()
