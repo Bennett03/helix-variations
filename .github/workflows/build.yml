@@ -42,14 +42,14 @@ jobs:
         #   run: python -c 'f = open("love.py", "w"); f.write("I love you!"); f.close()'
         # Attempt commit
         - uses: actions/checkout@v3
-        - name: Create report file
-          run: echo "heroes live here" > report.txt
-        - name: Commit report
+        - name: Create main.py from URL
+          run: python scrape.py
+        - name: Commit main.py for grading
           run: |
             git config --global user.name 'howshekilledit'
             git config --global user.email 'howshekilledite@users.noreply.github.com'
             git add .
-            git commit -am "write text to report"
+            git commit -am "write main.py fron trinket url"
         # Run GatorGrader: see config/gatorgrade.yml
         # - name: Checkout repository
         #   uses: actions/checkout@v3
