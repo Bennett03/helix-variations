@@ -5,28 +5,30 @@
 import re
 import requests
 import json
+import sys
 
 #get url from README.md
 
 
+readme = open('README.md', 'r')
+readme = readme.read()
+print(readme)
+url = re.search('trinket.io/glowscript/.*', readme).group(0)
 
-
-url = "https://trinket.io/embed/glowscript/4e40208104"
-#url = url + "&inLibrary=true"
+#format url to embed link so python from editor can be scraped
+#insert "embed/" between "trinket.io/" and "glowscript/"
+url = 'https://' + url[:11] + "embed/" + url[11:]
+print(url)
 
 #get the html from the url
-#html = urllib.request.urlopen(url).read()
 html = requests.get(url).text
-#get trinketObject.content from html 
 
+#get trinketObject.content from html 
 trinketObject = re.search('trinketObject = (.*);', html).group(1)
 trinketObject = json.loads(trinketObject)
 python = trinketObject['code']
-print(python)
 
-#print datatype
-print(type(trinketObject))
-#write html to file
+#write python from editor to file
 f = open("main.py", "w")
 f.write(str(python))
 f.close()

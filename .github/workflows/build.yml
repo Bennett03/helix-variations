@@ -48,17 +48,13 @@ jobs:
             git add .
             git commit -am "write main.py fron trinket url"
 
-        #Run GatorGrader: see config/gatorgrade.yml
-        # - name: Checkout repository
-        #   uses: actions/checkout@v3
-        #   with: 
-        #     fetch-depth: '0'
         # - name: check timestamp of first commit against deadline
         #   if: always()
         #   run: |
         #     git config --global user.name 'howshekilledit'
         #     git config --global user.email  'howshekilledite@users.noreply.github.com'
         #     git log --format=%ct --reverse | head -1 > timestamp.txt
+        #Run GatorGrader: see config/gatorgrade.yml
         - name: Run GatorGrader with GatorGrade
           if: always()
           run:  |
