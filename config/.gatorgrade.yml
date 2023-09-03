@@ -1,5 +1,5 @@
 - ./:
-    - LINK..md:
+    - LINK.md:
         - description: Add Trinket link to LINK.md
           check: MatchFileFragment
           options:
