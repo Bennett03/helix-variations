@@ -1,0 +1,31 @@
+- ./:
+    - README.md:
+        - description: Add Trinket link to README.md
+          check: MatchFileFragment
+          options:
+            fragment: 'trinket.io'
+            count: 1
+            exact: true
+    - main.py:
+        - description: Change the value of n on line 11
+          check: MatchFileFragment
+          options:
+            fragment: 'n = 20'
+            count: 0
+            exact: true
+        - description: Change the value of frame_rate on line 13
+          check: MatchFileFragment
+          options:
+            fragment: 'frame_rate = 10'
+            count: 0
+            exact: true
+        - description: Change the value of size on line 15
+          check: MatchFileFragment
+          options:
+            fragment: 'size = vector(20, 0.5, 5)'
+            count: 0
+            exact: true
+
+
+
+      
