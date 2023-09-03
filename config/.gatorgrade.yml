@@ -6,7 +6,7 @@
             fragment: 'trinket.io'
             count: 1
             exact: true
-    - main.py:
+    - config/main.py:
         - description: Change the value of n on line 11
           check: MatchFileFragment
           options:
