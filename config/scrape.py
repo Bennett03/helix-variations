@@ -10,7 +10,7 @@ import sys
 #get url from README.md
 
 
-readme = open('README.md', 'r')
+readme = open('LINK.md', 'r')
 readme = readme.read()
 print(readme)
 url = re.search('trinket.io/glowscript/.*', readme).group(0)
