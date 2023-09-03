@@ -38,15 +38,15 @@ jobs:
             pip install -U pip
             pip install requests        
         # Create main.py from trinket URL and commit for grading
-        - uses: actions/checkout@v3
-        - name: Create main.py from URL
-          run: python config/scrape.py
-        - name: Commit main.py for grading
-          run: |
-            git config --global user.name 'howshekilledit'
-            git config --global user.email 'howshekilledite@users.noreply.github.com'
-            git add .
-            git commit -am "write main.py fron trinket url"
+        # - uses: actions/checkout@v3
+        # - name: Create main.py from URL
+        #   run: python config/scrape.py
+        # - name: Commit main.py for grading
+        #   run: |
+        #     git config --global user.name 'howshekilledit'
+        #     git config --global user.email 'howshekilledite@users.noreply.github.com'
+        #     git add .
+        #     git commit -am "write main.py fron trinket url"
 
         #Run GatorGrader: see config/gatorgrade.yml
         - name: Checkout repository

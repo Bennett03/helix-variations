@@ -1,4 +1,4 @@
-- ../:
+- ./:
     - README.md:
         - description: Add Trinket link to README.md
           check: MatchFileFragment
@@ -20,7 +20,7 @@
             count: 0
             exact: true
         - description: Change the value of size on line 15
-          check: MatchFileFragment
+          check: MatchgitFileFragment
           options:
             fragment: 'size = vector(20, 0.5, 5)'
             count: 0
