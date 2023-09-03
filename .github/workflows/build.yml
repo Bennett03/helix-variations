@@ -40,7 +40,7 @@ jobs:
         # Create main.py from trinket URL and commit for grading
         - uses: actions/checkout@v3
         - name: Create main.py from URL
-          run: python .scrape.py
+          run: python config/scrape.py
         - name: Commit main.py for grading
           run: |
             git config --global user.name 'howshekilledit'
@@ -62,4 +62,4 @@ jobs:
           if: always()
           run:  |
             pip install gatorgrade
-            gatorgrade --config .gatorgrade.yml
+            gatorgrade --config config/.gatorgrade.yml
