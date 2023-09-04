@@ -3,6 +3,7 @@
 In this assignment, you will start to get your feet wet with VPython and 3D rendering. You'll see how little changes can make big differences in an image. You'll also have a chance to think about how you want an animation to look or feel, and to make coding choices to create the intended effect. 
 
 ## Instructions 
+### tip: right click links and open in a new tab, so that you still have this tab open to reference! 
 
 1. Sign into your [trinket.io](https://trinket.io/) account
 2. Find the starter code at [this link](https://trinket.io/glowscript/4e40208104). Hit the "Remix" button on the upper right ot make your own copy. 
